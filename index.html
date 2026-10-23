@@ -1,0 +1,199 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#155b43">
+  <meta name="description" content="Mercadinho Perto: uma demonstração de mercado online acessível, simples e responsivo.">
+  <title>Mercadinho Perto — sua compra sem complicação</title>
+  <link rel="stylesheet" href="styles.css">
+  <script src="app.js" defer></script>
+</head>
+<body>
+  <a class="skip-link" href="#conteudo">Pular para o conteúdo principal</a>
+
+  <header class="site-header" id="inicio">
+    <div class="top-line">
+      <p>Uma compra mais simples para todo mundo.</p>
+      <a href="#como-comprar">Como comprar</a>
+    </div>
+
+    <div class="header-main page-width">
+      <a class="brand" href="#inicio" aria-label="Mercadinho Perto — início">
+        <span class="brand-symbol" aria-hidden="true">MP</span>
+        <span class="brand-name">Mercadinho <strong>Perto</strong></span>
+      </a>
+
+      <form class="search-form" id="search-form" role="search">
+        <label class="visually-hidden" for="search-input">Buscar produtos pelo nome</label>
+        <input id="search-input" name="q" type="search" placeholder="O que você precisa?" autocomplete="off">
+        <button class="button button-primary search-button" type="submit">Buscar</button>
+      </form>
+
+      <button class="button button-outline accessibility-toggle" id="accessibility-toggle" type="button" aria-expanded="false" aria-controls="accessibility-panel">
+        <span aria-hidden="true">◉</span> Acessibilidade
+      </button>
+    </div>
+
+    <nav class="main-nav page-width" aria-label="Navegação principal">
+      <a href="#produtos">Ver produtos</a>
+      <a href="#como-comprar">Como comprar</a>
+      <a href="#carrinho">Seu carrinho <span class="nav-cart-count" id="nav-cart-count">0</span></a>
+    </nav>
+
+    <section class="accessibility-panel page-width" id="accessibility-panel" aria-label="Opções de acessibilidade" hidden>
+      <div class="accessibility-heading">
+        <div>
+          <h2>Deixe o site mais confortável</h2>
+          <p>Escolha as opções que ajudam você a navegar.</p>
+        </div>
+        <button class="icon-button" id="close-accessibility" type="button" aria-label="Fechar opções de acessibilidade">×</button>
+      </div>
+      <div class="accessibility-controls">
+        <div class="accessibility-option">
+          <span class="option-title" id="font-size-label">Tamanho do texto</span>
+          <div class="button-pair" role="group" aria-labelledby="font-size-label">
+            <button class="button button-small button-outline" id="font-decrease" type="button" aria-label="Diminuir o texto">A−</button>
+            <button class="button button-small button-outline" id="font-increase" type="button" aria-label="Aumentar o texto">A+</button>
+          </div>
+        </div>
+        <div class="accessibility-option">
+          <span class="option-title">Contraste</span>
+          <button class="button button-small button-outline" id="contrast-toggle" type="button" aria-pressed="false">Alto contraste: desligado</button>
+        </div>
+        <div class="accessibility-option">
+          <span class="option-title">Leitura simplificada</span>
+          <button class="button button-small button-outline" id="simple-mode-toggle" type="button" aria-pressed="false">Modo simples: desligado</button>
+        </div>
+        <div class="accessibility-option">
+          <span class="option-title">Ouvir instruções</span>
+          <div class="button-pair">
+            <button class="button button-small button-outline" id="read-instructions" type="button">Ouvir</button>
+            <button class="button button-small button-outline" id="stop-audio" type="button">Parar áudio</button>
+          </div>
+        </div>
+      </div>
+      <p class="accessibility-note">A leitura em voz alta depende dos recursos de áudio disponíveis no seu navegador e dispositivo.</p>
+    </section>
+  </header>
+
+  <main id="conteudo">
+    <section class="hero page-width" aria-labelledby="hero-title">
+      <div class="hero-content">
+        <p class="eyebrow">Perto de você, fácil de usar</p>
+        <h1 id="hero-title">Sua compra do dia,<br><span>sem complicação.</span></h1>
+        <p class="hero-description">Encontre o que precisa, ouça a descrição dos produtos e monte seu carrinho no seu ritmo.</p>
+        <div class="hero-actions">
+          <a class="button button-primary button-large" href="#produtos">Começar minha compra</a>
+          <button class="button button-light button-large" id="read-welcome" type="button"><span aria-hidden="true">▶</span> Ouvir apresentação</button>
+        </div>
+        <p class="demo-note">Demonstração de loja: não há cobrança nem entrega real.</p>
+      </div>
+      <div class="hero-art" aria-hidden="true">
+        <div class="hero-circle"></div>
+        <div class="grocery-bag"><span>🥬</span><span>🍞</span><span>🥛</span></div>
+        <div class="hero-sticker">Compra fácil<br>para todos</div>
+      </div>
+    </section>
+
+    <section class="benefits page-width" aria-label="Recursos do site">
+      <article class="benefit">
+        <span class="benefit-icon" aria-hidden="true">Aa</span>
+        <div><h2>Texto ajustável</h2><p>Aumente as letras quando precisar.</p></div>
+      </article>
+      <article class="benefit">
+        <span class="benefit-icon" aria-hidden="true">◖)))</span>
+        <div><h2>Produtos com áudio</h2><p>Ouça o nome, a descrição e o preço.</p></div>
+      </article>
+      <article class="benefit">
+        <span class="benefit-icon" aria-hidden="true">✓</span>
+        <div><h2>Passos claros</h2><p>Escolha, adicione e confira seu carrinho.</p></div>
+      </article>
+    </section>
+
+    <div class="shopping-layout page-width">
+      <section class="products-section" id="produtos" aria-labelledby="products-title">
+        <div class="section-heading">
+          <div>
+            <p class="eyebrow">Escolha o que precisa</p>
+            <h2 id="products-title">Produtos do mercadinho</h2>
+            <p class="section-intro">Toque em “Adicionar” para colocar um produto no carrinho.</p>
+          </div>
+          <p class="results-count" id="results-count" aria-live="polite">12 produtos</p>
+        </div>
+
+        <div class="category-list" id="category-list" role="group" aria-label="Filtrar produtos por categoria">
+          <button class="category-button is-active" type="button" data-category="Todos" aria-pressed="true">Todos</button>
+          <button class="category-button" type="button" data-category="Básicos" aria-pressed="false">Básicos</button>
+          <button class="category-button" type="button" data-category="Hortifruti" aria-pressed="false">Frutas e verduras</button>
+          <button class="category-button" type="button" data-category="Laticínios" aria-pressed="false">Laticínios</button>
+          <button class="category-button" type="button" data-category="Padaria" aria-pressed="false">Padaria</button>
+          <button class="category-button" type="button" data-category="Cuidados" aria-pressed="false">Cuidados</button>
+        </div>
+
+        <div class="product-grid" id="product-grid" aria-label="Lista de produtos"></div>
+        <p class="empty-results" id="empty-results" hidden>Nenhum produto encontrado. Tente outro nome ou escolha outra categoria.</p>
+      </section>
+
+      <aside class="cart-panel" id="carrinho" aria-labelledby="cart-title">
+        <div class="cart-heading">
+          <div>
+            <p class="eyebrow">Sua seleção</p>
+            <h2 id="cart-title">Meu carrinho <span class="cart-count" id="cart-count">0</span></h2>
+          </div>
+          <span class="cart-icon" aria-hidden="true">🛒</span>
+        </div>
+        <p class="cart-help">Aqui ficam os produtos que você escolher.</p>
+        <div class="cart-empty" id="cart-empty">
+          <span aria-hidden="true">🧺</span>
+          <p><strong>Seu carrinho está vazio.</strong></p>
+          <p>Adicione um produto para começar.</p>
+        </div>
+        <ul class="cart-items" id="cart-items" aria-label="Produtos no carrinho"></ul>
+        <div class="cart-summary" id="cart-summary" hidden>
+          <div class="summary-line"><span>Subtotal</span><strong id="cart-subtotal">R$ 0,00</strong></div>
+          <p class="summary-note">O valor é uma simulação. Entrega e pagamento não estão incluídos.</p>
+          <button class="button button-primary checkout-button" id="checkout-button" type="button">Conferir pedido</button>
+          <button class="button button-text clear-cart-button" id="clear-cart-button" type="button">Esvaziar carrinho</button>
+        </div>
+      </aside>
+    </div>
+
+    <section class="how-to page-width" id="como-comprar" aria-labelledby="how-title">
+      <div class="how-heading">
+        <p class="eyebrow">É bem simples</p>
+        <h2 id="how-title">Como comprar</h2>
+        <p>Siga três passos. Você pode voltar e mudar sua seleção quando quiser.</p>
+      </div>
+      <ol class="steps-list">
+        <li><span class="step-number" aria-hidden="true">1</span><div><h3>Encontre um produto</h3><p>Use a busca ou escolha uma categoria.</p></div></li>
+        <li><span class="step-number" aria-hidden="true">2</span><div><h3>Adicione ao carrinho</h3><p>Use o botão “Adicionar” no produto escolhido.</p></div></li>
+        <li><span class="step-number" aria-hidden="true">3</span><div><h3>Confira sua seleção</h3><p>No carrinho, aumente ou diminua as quantidades.</p></div></li>
+      </ol>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="page-width footer-content">
+      <a class="brand footer-brand" href="#inicio" aria-label="Mercadinho Perto — voltar ao início">
+        <span class="brand-symbol" aria-hidden="true">MP</span>
+        <span class="brand-name">Mercadinho <strong>Perto</strong></span>
+      </a>
+      <p>Um exemplo de mercado digital acessível e responsivo.</p>
+      <a href="#inicio">Voltar ao início ↑</a>
+    </div>
+  </footer>
+
+  <dialog class="checkout-dialog" id="checkout-dialog" aria-labelledby="dialog-title">
+    <div class="dialog-content">
+      <div class="dialog-symbol" aria-hidden="true">✓</div>
+      <h2 id="dialog-title">Resumo do seu pedido</h2>
+      <p id="dialog-summary"></p>
+      <p class="dialog-disclaimer"><strong>Atenção:</strong> este site é uma demonstração. O pedido não será enviado, não há estoque real e nenhum pagamento será realizado.</p>
+      <button class="button button-primary button-large" id="close-dialog" type="button">Entendi</button>
+    </div>
+  </dialog>
+
+  <div class="status-message" id="status-message" role="status" aria-live="polite" aria-atomic="true"></div>
+</body>
+</html>
